@@ -44,11 +44,13 @@ public class CheckLoginBean {
     
     boolean checkAcceso (String usuario,String password){
         
+          if (usuario.equals("dimas")&& password.equals("dimas")){
         
         return true;
-        
-        
-    }
+               
+    }else {
+          return false;
+      }
     
     
-}
+    }}

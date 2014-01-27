@@ -33,10 +33,20 @@ public class ControlNoticiasServlet extends HttpServlet {
         CheckLoginBean login = new CheckLoginBean();
         login.setUsuario(request.getParameter("usuario"));
         login.setPass(request.getParameter("pass"));
+         request.setAttribute("CheckLoginBean",login);
         
-    request.setAttribute("CheckLoginBean",login);
-    request.getRequestDispatcher("contenidofull.jsp").forward(request, response);
-     
+        if (login.checkAcceso(login.getUsuario(), login.getPass())){
+            
+            request.getRequestDispatcher("contenidofull.jsp").forward(request, response);
+            
+            
+        }else {
+        
+        
+                
+
+    request.getRequestDispatcher("index.jsp").forward(request, response);
+        }
           //  request.setAttribute(, login);
           // request.getRequestDispatcher("contenidofull.jsp").forward(request, response);
       
