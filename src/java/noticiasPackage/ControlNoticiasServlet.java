@@ -40,7 +40,9 @@ public class ControlNoticiasServlet extends HttpServlet {
         login.setApellido2(request.getParameter("apellido2"));
         login.setEmail(request.getParameter("email"));
         login.setNombreusuario(request.getParameter("nombreusuario"));
-        login.setContraseña(request.getParameter("contraseña"));
+        login.setNuevapass(request.getParameter("nuevapass"));
+       
+         
                                         request.setAttribute("CheckLoginBean",login);
         
                                         

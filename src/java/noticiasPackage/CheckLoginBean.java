@@ -17,77 +17,24 @@ public class CheckLoginBean {
     private String pass;
     private String nombre;
     private String apellido1;
-    private String apellido2;
-    private String email;
-    private String nombreusuario;
-    private String contraseña;
-
-    public void setApellido1(String apellido1) {
-        this.apellido1 = apellido1;
-    }
+     private String apellido2;
 
     public void setApellido2(String apellido2) {
         this.apellido2 = apellido2;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setNombreusuario(String nombreusuario) {
-        this.nombreusuario = nombreusuario;
-    }
-
-    
-
-    public String getApellido1() {
-        return apellido1;
-    }
-
     public String getApellido2() {
         return apellido2;
     }
+    private String nuevapass;
+    private String email;
+    private String nombreusuario;
+    
+    
+    
+    
+    
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getNombreusuario() {
-        return nombreusuario;
-    }
-
-    
-    
-    
-    public String getNombre (){
-        return nombre;}
-    public void setNombre(String nombre){
-        this.nombre=nombre;}
-        
-    
-    
-    public String getUsuario (){
-        return usuario;}
-    public void setUsuario(String usuario){
-        this.usuario=usuario;
-        
-    }
-    
-    public String getPass (){
-        return pass;
-        
-        
-    }
-
-    /**
-     *
-     * @param pass
-     */
-    public void setPass(String pass){
-        this.pass=pass;
-        
-    }
-    
     
     
     boolean checkAcceso (String usuario,String password){
@@ -103,6 +50,66 @@ public class CheckLoginBean {
     
     }
 
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido1() {
+        return apellido1;
+    }
+
+    public String getNuevapass() {
+        return nuevapass;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getNombreusuario() {
+        return nombreusuario;
+    }
+
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido1(String apellido1) {
+        this.apellido1 = apellido1;
+    }
+
+    public void setNuevapass(String nuevapass) {
+        this.nuevapass = nuevapass;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setNombreusuario(String nombreusuario) {
+        this.nombreusuario = nombreusuario;
+    }
+
+
+    
+
 boolean nuevoRegistro (String usuario,String password){
      
     if (usuario.equals("none")&& password.equals("none"))
@@ -115,14 +122,6 @@ boolean nuevoRegistro (String usuario,String password){
    
 }
 
-    public String getContraseña() {
-        return contraseña;
-    }
-
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
-    }
-
-
+ 
 
 }
