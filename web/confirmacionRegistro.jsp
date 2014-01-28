@@ -74,15 +74,15 @@
      
     <div class="formularioregistro">
 
-      < <jsp:useBean id="checkLoginBean" scope="request" class="noticiasPackage.CheckLoginBean" />
-        Datos De registro:
+       <jsp:useBean id="checkLoginBean" scope="request" class="noticiasPackage.CheckLoginBean" />
+      <h1> Datos De registro:</h1><br><br>
        
-            <jsp:getProperty name="CheckLoginBean" property="nombre" />
+        <h2> Usted se llama <br> <jsp:getProperty name="CheckLoginBean" property="nombre" />
               <jsp:getProperty name="CheckLoginBean" property="apellido1" />
-                <jsp:getProperty name="CheckLoginBean" property="apellido2" />
-                  <jsp:getProperty name="CheckLoginBean" property="email" />
-                    <jsp:getProperty name="CheckLoginBean" property="nombreusuario" />
-                      <jsp:getProperty name="CheckLoginBean" property="contraseña" />
+                 <jsp:getProperty name="CheckLoginBean" property="email" />,desea acceder a nuestro gestro de contenido como :
+                    <jsp:getProperty name="CheckLoginBean" property="nombreusuario" /> usando la contraseña siguiente:
+                    <jsp:getProperty name="CheckLoginBean" property="nuevapass" />
+                    .</h2>
 
       
       

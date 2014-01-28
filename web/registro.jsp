@@ -82,7 +82,8 @@
         Segundo Apellido:<input type="text" class="form-control" name="apellido2" placeholder="Segundo Apellido" size="10" required autofocus>
         Email:<input type="text" class="form-control" name="email" placeholder="Direccion de correo electronico" size="15" required autofocus>
         Nombre de Usuario:<input type="text" class="form-control" name="nombreusuario" placeholder="Nombre de Cuenta" size="10" required autofocus>
-        Contraseña:<input type="password" name="contraseña" class="form-control" placeholder="Contraseña de Cuenta" size="10" required>
+        Contraseña:<input type="password" class="form-control" name="nuevapass" placeholder="Introduzca contraseña de acceso" size="10" required autofocus>
+        
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Recordar!
         </label>

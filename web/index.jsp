@@ -73,11 +73,15 @@
               </div>
               <div class="form-group">
                  <input type="password" name="pass" class="form-control" placeholder="Contraseña" required>
+                 
+                 
+                 
+                 
                  <input type="hidden" name="apellido1" value="none">
                  <input type="hidden" name="apellido2" value="none">
                  <input type="hidden" name="nombre" value="none">
                  <input type="hidden" name="nombreusuario" value="none">
-                 <input type="hidden" name="contra" value="none">
+                 <input type="hidden" name="contraseña" value="none">
                  <input type="hidden" name="email" value="none">
                  
               </div>
