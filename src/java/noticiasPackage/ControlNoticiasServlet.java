@@ -30,29 +30,48 @@ public class ControlNoticiasServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        
         CheckLoginBean login = new CheckLoginBean();
         login.setUsuario(request.getParameter("usuario"));
         login.setPass(request.getParameter("pass"));
-         request.setAttribute("CheckLoginBean",login);
+        login.setNombre(request.getParameter("nombre"));
+        login.setApellido1(request.getParameter("apellido1"));
+        login.setApellido2(request.getParameter("apellido2"));
+        login.setEmail(request.getParameter("email"));
+        login.setNombreusuario(request.getParameter("nombreusuario"));
+        login.setContraseña(request.getParameter("contraseña"));
+                                        request.setAttribute("CheckLoginBean",login);
         
+                                        
+                                        
+                                        
+                                        
+                                        
         if (login.checkAcceso(login.getUsuario(), login.getPass())){
             
             request.getRequestDispatcher("contenidofull.jsp").forward(request, response);
             
             
+            
         }else {
         
+        if (login.nuevoRegistro(login.getUsuario(), login.getPass())){
+            
         
+    request.getRequestDispatcher("confirmacionRegistro.jsp").forward(request, response);
+            
+        }else{
                 
 
-    request.getRequestDispatcher("index.jsp").forward(request, response);
+    request.getRequestDispatcher("registro.jsp").forward(request, response);
         }
           //  request.setAttribute(, login);
           // request.getRequestDispatcher("contenidofull.jsp").forward(request, response);
       
         
         
-    }
+    }}
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -74,23 +74,19 @@
      
     <div class="formularioregistro">
 
-      <form action="ControlNoticiasServlet" method="POST" class="form-signin">
-     
-        <h2 class="form-signin-heading btn btn-lg btn-primary btn-block"><center>Formulario Registro.</center></h2>
-        Nombre:<input type="text" class="form-control" name="nombre" placeholder="Nombre" size="10" required autofocus>
-        Primer Apellido:<input type="text" class="form-control" name="apellido1" placeholder="Primer Apellido" size="10" required autofocus>
-        Segundo Apellido:<input type="text" class="form-control" name="apellido2" placeholder="Segundo Apellido" size="10" required autofocus>
-        Email:<input type="text" class="form-control" name="email" placeholder="Direccion de correo electronico" size="15" required autofocus>
-        Nombre de Usuario:<input type="text" class="form-control" name="nombreusuario" placeholder="Nombre de Cuenta" size="10" required autofocus>
-        Contraseña:<input type="password" name="contraseña" class="form-control" placeholder="Contraseña de Cuenta" size="10" required>
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Recordar!
-        </label>
-         <input type="hidden" name="usuario" value="none">
-          <input type="hidden" name="pass" value="none">
-        <button class="btn btn-lg btn-success btn-block" type="submit">Registrarse!!!</button>
-      </form>
+      < <jsp:useBean id="checkLoginBean" scope="request" class="noticiasPackage.CheckLoginBean" />
+        Datos De registro:
+       
+            <jsp:getProperty name="CheckLoginBean" property="nombre" />
+              <jsp:getProperty name="CheckLoginBean" property="apellido1" />
+                <jsp:getProperty name="CheckLoginBean" property="apellido2" />
+                  <jsp:getProperty name="CheckLoginBean" property="email" />
+                    <jsp:getProperty name="CheckLoginBean" property="nombreusuario" />
+                      <jsp:getProperty name="CheckLoginBean" property="contraseña" />
 
+      
+      
+      
       
       
   </div>
