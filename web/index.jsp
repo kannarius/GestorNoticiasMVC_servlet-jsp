@@ -86,10 +86,6 @@
   </div>
           </div><!--/.navbar-collapse -->
    
-          <div>        
-   <div class="jumbotron">
-  
-
         </div>
        </div>
 
