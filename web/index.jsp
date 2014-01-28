@@ -75,6 +75,10 @@
                  <input type="password" name="pass" class="form-control" placeholder="Contraseña" required>
               </div>
               <button type="submit" class="btn btn-success">Acceder</button>
+       
+              <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Recordar!
+              </label>
               
               <div class="container22">
                   <br> <a href="registro.jsp" class="btn btn-primary btn-lg btn-block">Resgistrate<a>
@@ -90,7 +94,29 @@
        </div>
 
 
+   <div class="jumbotron">
+  
+       <br>
+        </div>
+      
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+     
+    <div class="intro">
+        <center>
+        <p> Bienvenido a nuestro gestor de noticias , desarrollado en java , utilizando las tecnologias JSP,JSLT y siguiendo el patron <br><h3> MODELO-VISTA-CONTROLADOR</h3><br> Haciendo usos de beans y otros.
+        <img src="img/ultimas-noticias-wordpress.jpg" width="400" height="300" alt="ultimas-noticias-wordpress"/>
+        </center>
+        <br> <a href="registro.jsp" class="btn btn-lg btn-success btn-block" >Registrarse!!!</a>
+      </form>
 
+      
+      
+  </div>
+  <div class="col-md-4"></div>
+</div>
+  
 
       <!-- Bootstrap core JavaScript
       ================================================== -->
