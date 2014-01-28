@@ -56,16 +56,10 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Inicio</a>
+             <a class="navbar-brand" href="index.jsp">          </a>
             </button>
-            <a class="navbar-brand" href="index.php">Buscador</a>
+            <a class="navbar-brand" href="index.jsp"><h2>GESTOR DE NOTICIAS MVC</h2></a>
             </button>
-            <a class="navbar-brand" href="index.php">Favoritos</a>
-            </button>
-                      <?php 
-                     include 'include/botonregistro.php' ;
-
-                      ?>
            </div>
 
                                

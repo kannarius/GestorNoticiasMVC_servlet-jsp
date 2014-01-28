@@ -49,12 +49,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Inicio</a>
+            <a class="navbar-brand" href="index.jsp">          </a>
             </button>
-            <a class="navbar-brand" href="index.php">Buscador</a>
+            <a class="navbar-brand" href="index.jsp"><h2>GESTOR DE NOTICIAS MVC</h2></a>
             </button>
-            <a class="navbar-brand" href="index.php">Favoritos</a>
-            </button>
+          
                      
            </div>
 
@@ -73,7 +72,7 @@
                              
                              <jsp:useBean id="checkLoginBean" scope="request" class="noticiasPackage.CheckLoginBean" />
         
-             <jsp:getProperty name="CheckLoginBean" property="usuario" />
+            Administracion <jsp:getProperty name="CheckLoginBean" property="usuario" />
                              
                              
                          </button>
@@ -82,13 +81,13 @@
                                       
                                                        </button>
                                                                <ul class="dropdown-menu" role="menu">
-                                                                  <li><a href="#">Mis Favoritos</a></li>
-                                                                   <li><a href="#">Mis Anuncios</a></li>
-                                                                 <li><a href="#">Mensajes</a></li>
-                                                                   <li><a href="#">Mis Datos</a></li>
+                                                                  <li><a href="#">Mis Noticias</a></li>
+                                                                   <li><a href="#">Gestion Noticias</a></li>
+                                                               
+                                                                   <li><a href="#">Mi Cuenta</a></li>
                                   
                                                                              <li class="divider"></li>
-                                                                           <li><a class="btn btn-danger" href="desconectar.php">Desconectar</a></li>
+                                                                           <li><a class="btn btn-primary" href="desconectar.php">Desconectar</a></li>
                                       
                                                                             </ul>
 
