@@ -21,7 +21,7 @@
       <meta name="author" content="">
       <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-      <title>Venta de coches JSP v1</title>
+      <title>Gestion de noticias JSP-SERVLET MVC</title>
 
       <!-- Bootstrap core CSS -->
       <link href="./css/bootstrap.css" rel="stylesheet">
