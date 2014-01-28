@@ -5,19 +5,31 @@
  */
 
 package noticiasPackage;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author pc
  */
 public class CheckLoginBean {
-    
+    //Variables para los usuarios
     private String usuario;
     private String pass;
     private String nombre;
     private String apellido1;
-     private String apellido2;
+    private String apellido2;
+    private String nuevapass;
+    private String email;
+    private String nombreusuario;
+    private String pepe;
+    
+       
+    
 
     public void setApellido2(String apellido2) {
         this.apellido2 = apellido2;
@@ -26,30 +38,8 @@ public class CheckLoginBean {
     public String getApellido2() {
         return apellido2;
     }
-    private String nuevapass;
-    private String email;
-    private String nombreusuario;
     
     
-    
-    
-    
-
-    
-    
-    boolean checkAcceso (String usuario,String password){
-        
-          if (usuario.equals("dimas")&& password.equals("dimas")){
-        
-        return true;
-               
-    }else {
-          return false;
-      }
-    
-    
-    }
-
     public String getUsuario() {
         return usuario;
     }
@@ -109,6 +99,21 @@ public class CheckLoginBean {
 
 
     
+    
+    boolean checkAcceso (String usuario,String password){
+        
+          if (usuario.equals("dimas")&& password.equals("dimas")){
+        
+        return true;
+               
+    }else {
+          return false;
+      }
+    
+    
+    }
+
+    
 
 boolean nuevoRegistro (String usuario,String password){
      
@@ -119,9 +124,59 @@ boolean nuevoRegistro (String usuario,String password){
     } 
         return false;
     
-   
+}
+      void registro(String nombre,String apellido1,String apellido2,String email,String nombreusuario,String nuevacontraseña ){
+            
+         GestionDB coneccion=new GestionDB();
+         coneccion.Conexion();
+         
+        coneccion.getConnection();
+      
+          
+          String sql="insert into usuarios(nombre,apellido1,apellido2,correo,usuario,password) values ('"+nombre+"','"+apellido1+"','"+apellido2+"','"+email+"','"+nombreusuario+"','"+nuevacontraseña+"')";
+          try {
+            Statement st=coneccion.createStatement();
+            st.executeUpdate(sql);
+            coneccion.close();
+            st.close();
+              
+          } catch (SQLException ex) {
+            Logger.getLogger(CheckLoginBean.class.getName()).log(Level.SEVERE, null, ex);
+        
+          }
+       
+        
+        
+         
+            
+        
+        
+        
 }
 
  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
