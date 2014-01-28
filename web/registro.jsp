@@ -1,10 +1,17 @@
-
+<%-- 
+    Document   : index
+    Created on : 25-ene-2014, 21:22:00
+    Author     : pc
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
  <!DOCTYPE html>
   <html lang="en">
 
+  <?php
+  session_start();
+  ?>
     <head>
 
       <meta charset="utf-8">
@@ -49,71 +56,47 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.jsp">          </a>
+             <a class="navbar-brand" href="index.jsp">          </a>
             </button>
             <a class="navbar-brand" href="index.jsp"><h2><center>GESTOR DE NOTICIAS<br> MVC</center></h2></a>
             </button>
-          
-                     
-           </div>
-
-<div class="navbar-collapse collapse">
-            <form  action="index.php" method="POST" class="navbar-form navbar-right">
-          
-              <div class="form-group">
-              
-              </div>
-              <div class="form-group">
-                 
-              </div>
-              
-                     <div class="btn-group">
-                         <button type="button" class="btn btn-primary">
-                             
-                             <jsp:useBean id="checkLoginBean" scope="request" class="noticiasPackage.CheckLoginBean" />
-        
-            Administracion <jsp:getProperty name="CheckLoginBean" property="usuario" />
-                             
-                             
-                         </button>
-                                                   <button type="button" class="btn btn-primary dropdown-toggle " data-toggle="dropdown">
-                                                     <span class="caret"></span>
-                                      
-                                                       </button>
-                                                               <ul class="dropdown-menu" role="menu">
-                                                                  <li><a href="#">Mis Noticias</a></li>
-                                                                   <li><a href="#">Gestion Noticias</a></li>
-                                                               
-                                                                   <li><a href="#">Mi Cuenta</a></li>
-                                  
-                                                                             <li class="divider"></li>
-                                                                           <li><a class="btn btn-primary" href="desconectar.php">Desconectar</a></li>
-                                      
-                                                                            </ul>
-
-                                                                                                </div>
-
-  <div class="form-group">';
-      
-      
-      
-      
-
- 
+           </div> 
   </div>
-
-
-
-
-
-            </form>
+         
           </div><!--/.navbar-collapse -->
+   
+   <div class="jumbotron">
+  
+
         </div>
-    
+       
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+     
+    <div class="formularioregistro">
+
+      <form action="ControlNoticiasServlet" method="POST" class="form-signin">
+     
+        <h2 class="form-signin-heading btn btn-lg btn-primary btn-block"><center>Formulario Registro.</center></h2>
+        Nombre:<input type="text" class="form-control" name="nombre" placeholder="Nombre" size="10" required autofocus>
+        Primer Apellido:<input type="text" class="form-control" name="apellido1" placeholder="Primer Apellido" size="10" required autofocus>
+        Segundo Apellido:<input type="text" class="form-control" name="apellido2" placeholder="Segundo Apellido" size="10" required autofocus>
+        Email:<input type="text" class="form-control" name="email" placeholder="Direccion de correo electronico" size="15" required autofocus>
+        Nombre de Usuario:<input type="text" class="form-control" name="nombreusuario" placeholder="Nombre de Cuenta" size="10" required autofocus>
+        Contraseña:<input type="password" name="contraseña" class="form-control" placeholder="Contraseña de Cuenta" size="10" required>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Recordar!
+        </label>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Registrarse!!!</button>
+      </form>
 
       
-
-
+      
+  </div>
+  <div class="col-md-4"></div>
+</div>
+  
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
@@ -122,25 +105,4 @@
    <script src="./js/holder.js"></script>
     </body>
   </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -58,7 +58,7 @@
             </button>
              <a class="navbar-brand" href="index.jsp">          </a>
             </button>
-            <a class="navbar-brand" href="index.jsp"><h2>GESTOR DE NOTICIAS MVC</h2></a>
+            <a class="navbar-brand" href="index.jsp"><h2><center>GESTOR DE NOTICIAS<br> MVC</center></h2></a>
             </button>
            </div>
 
@@ -75,28 +75,25 @@
                  <input type="password" name="pass" class="form-control" placeholder="Contraseña" required>
               </div>
               <button type="submit" class="btn btn-success">Acceder</button>
+              
+              <div class="container22">
+                  <br> <a href="registro.jsp" class="btn btn-primary btn-lg btn-block">Resgistrate<a>
+              </div>            </form>
 
   <div class="form-group">
 
       
-      
-      
-      
-      
-
- 
   </div>
-
-
-
-
-
-            </form>
           </div><!--/.navbar-collapse -->
-        </div>
-    
+   
+          <div>        
+   <div class="jumbotron">
+  
 
-      
+        </div>
+       </div>
+
+
 
 
       <!-- Bootstrap core JavaScript

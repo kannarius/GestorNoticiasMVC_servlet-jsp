@@ -782,9 +782,16 @@ pre code {
 }
 
 .formularioregistro {
-  height: 350px;
-  
-  background-color: rgba(0,0,0,0.55);
+ // height: 350px;
+ font-size: 14px;
+   padding-right: 45px;
+  padding-left: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.20);
   
 
 }
