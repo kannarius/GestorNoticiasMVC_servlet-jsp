@@ -3,7 +3,11 @@
     Created on : 25-ene-2014, 21:22:00
     Author     : pc
 --%>
-
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+ 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
  <!DOCTYPE html>
@@ -45,6 +49,16 @@
 
   <body>
 
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container22">
           <div class="navbar-header">
@@ -86,9 +100,44 @@
                   </h2>
 
       
-      
-      
-      
+          
+<sql:setDataSource var="midb" driver="com.mysql.jdbc.Driver"
+     url="jdbc:mysql://localhost/gestionnoticiasdb"
+     user="root"  password=""/>
+
+
+
+
+
+
+<sql:update var="usuario" dataSource="${midb}">
+    INSERT INTO usuarios (nombre, apellido1,apellido2,correo,usuario,password,administrador)
+    VALUES ('+nombre+', 'apellido1', 'apellido2', 'email', 'nombreusuario','nuevapass',1)
+</sql:update>
+
+      <sql:query dataSource="${midb}" var="result">
+SELECT * from usuarios;
+</sql:query>
+ <div class="table-responsive">
+  <table class="table">
+
+<tr>
+   <th> ID</th>
+   <th>nombre</th>
+   <th>Apellido</th>
+   <th>Apellido</th>
+</tr>
+<c:forEach var="row" items="${result.rows}">
+<tr>
+
+   <td><c:out value="${row.id}"/></td>
+   <td><c:out value="${row.nombre}"/></td>
+   <td><c:out value="${row.apellido1}"/></td>
+   <td><c:out value="${row.apellido2}"/></td>
+</tr>
+</c:forEach>
+
+</table>   
       
   </div>
   <div class="col-md-4"></div>

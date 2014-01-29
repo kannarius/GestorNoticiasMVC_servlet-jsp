@@ -5,12 +5,7 @@
  */
 
 package noticiasPackage;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -27,7 +22,7 @@ public class CheckLoginBean {
     private String email;
     private String nombreusuario;
     private String pepe;
-    
+     
        
     
 
@@ -124,34 +119,7 @@ boolean nuevoRegistro (String usuario,String password){
     } 
         return false;
     
-}
-      void registro(String nombre,String apellido1,String apellido2,String email,String nombreusuario,String nuevacontraseña ){
-            
-         GestionDB coneccion=new GestionDB();
-         coneccion.Conexion();
-         
-        coneccion.getConnection();
-      
-          
-          String sql="insert into usuarios(nombre,apellido1,apellido2,correo,usuario,password) values ('"+nombre+"','"+apellido1+"','"+apellido2+"','"+email+"','"+nombreusuario+"','"+nuevacontraseña+"')";
-          try {
-            Statement st=coneccion.createStatement();
-            st.executeUpdate(sql);
-            coneccion.close();
-            st.close();
-              
-          } catch (SQLException ex) {
-            Logger.getLogger(CheckLoginBean.class.getName()).log(Level.SEVERE, null, ex);
-        
-          }
-       
-        
-        
-         
-            
-        
-        
-        
+   
 }
 
  
